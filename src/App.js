@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const Header = () => (
+    <header className='header'>
+        <h1>Avatar Clicky Game!</h1>
+        <h2>Click on an image to earn points, but don't click on any more than once!</h2>
+    </header>
+);
+
+const Navbar = () => (
+    <nav className='navBar'>
+        <ul className='navBarList'>
+            <li>Clicky Game</li>
+            <li>Click an image to begin!</li>
+            <li>Score: 0 | Top Score: 0</li>
+        </ul>
+    </nav>
+);
+
+const App = () => {
+    return (
+        <main>
+            <Header />
+            <Navbar />
+        </main>
+    );
+};
 
 export default App;
